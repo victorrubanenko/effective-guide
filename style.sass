@@ -31,6 +31,8 @@ img, svg
 a:hover, button:hover
     cursor: pointer
     opacity: .6
+button
+    padding: 15px 15px 15px 15px
 
 .dnone
     display: none
@@ -69,21 +71,33 @@ body
         .minicontainer
             background-color: black
             display: flex
-            justify-content: space-between
-            width: 70%
+            justify-content: center
+            width: 1300px
             // flex-wrap: wrap
             padding: 40px 40px
             margin: 40px auto
             column-gap: 30px
-            .img
-                height: 90%
+            border-radius: 10px
+            @media (max-width:1300px)
+                width: 100%
+                padding: 0 15px
+            img
+                width: 400px
+                object-fit: cover
+                @media (max-width:400px)
+                    width: 100%
+                    padding: 0 15px
+
             .left_part
                 display: flex
                 flex-wrap: wrap
-                width: 50%
+                width: 780px
                 // margin-right: 220px
                 padding-right: 10px
                 margin-top: 150px
+                @media (max-width:780px)
+                    width: 100%
+                    padding: 0 15px
             .title
                 font-family: DM Sans
                 font-size: 64px
@@ -111,14 +125,19 @@ body
                 background-color: rgba(17, 141, 168, 1)
                 height: 51px
                 margin-top: 14px
+
         .subscribe_container
             background: black
-            width: 90%
+            width: 1300px
             padding: 20px 20px
             display: flex
             justify-content: space-between
+            border-radius: 30px
+            @media (max-width:1300px)
+                width: 100%
+                padding: 0 15px
             .subscribe_left
-                width: 50%
+                width: 40%
                 .Emails
                     font-family: DM Sans
                     font-size: 18px
@@ -140,12 +159,18 @@ body
                     margin-left: 50px
             .subscribe_right
                 width: 40%
-                form
+                input
                     height: 82px
+                    width: 522px
                     background-color: rgba(25, 25, 25, 1)
-                    border-radius: 10px
+                    border-radius: 6px
                     margin-top: 20px
-                    width: 100%
+                    outline-color: red
+                    outline: none
+                    margin-left: -65px
+                    @media (max-width: 522px)
+                        width: 100%
+                        padding: 0 15px
 
                 button
                     font-family: DM Sans
@@ -158,3 +183,4 @@ body
                     height: 51px
                     margin-top: 14px
                     width: 87px
+                    margin-right: 370px
